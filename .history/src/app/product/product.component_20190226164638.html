@@ -1,0 +1,25 @@
+<div class="mb-20" flFlex flexLayout="row" flexLayout.lt-md="column">
+  <div fxFlex>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Word</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let element">{{ element.productName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="modelCode">
+        <th mat-header-cell *matHeaderCellDef>Sentences</th>
+        <td mat-cell *matCellDef="let element">{{ element.modelCode }}</td>
+      </ng-container>
+      <ng-container matColumnDef="serialNumber">
+        <th mat-header-cell *matHeaderCellDef>Word Type</th>
+        <td mat-cell *matCellDef="let element">{{ element.serialNumber }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

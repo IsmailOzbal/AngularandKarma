@@ -1,0 +1,28 @@
+<p> Product List 1</p>
+<div class="mb-20" flFlex flexLayout="row" flexLayout.lt-md="column">
+  <div fxFlex>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>PRODUCT ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef>PRODUCT NAME</th>
+        <td mat-cell *matCellDef="let element">{{ element.productName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="modelCode">
+        <th mat-header-cell *matHeaderCellDef>MODEL CODE</th>
+        <td mat-cell *matCellDef="let element">{{ element.modelCode }}</td>
+      </ng-container>
+      <ng-container matColumnDef="serialNumber">
+        <th mat-header-cell *matHeaderCellDef>SERIAL NUMBER</th>
+        <td mat-cell *matCellDef="let element">{{ element.serialNumber }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons ></mat-paginator>
+  </div>
+</div>

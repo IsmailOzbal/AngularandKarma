@@ -1,0 +1,31 @@
+
+<p-carousel headerText="Products"  [value]="products">
+    <ng-template let-product pTemplate="item">
+        <div class="ui-grid ui-grid-responsive">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12"><img src="../../assets/images/samsung.jpg" width="60"></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">Id</div>
+                <div class="ui-grid-col-6">{{product.id}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">Product Name</div>
+                <div class="ui-grid-col-6">{{product.productName}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">Model Code</div>
+                <div class="ui-grid-col-6">{{product.modelCode}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-6">Serial Number</div>
+                <div class="ui-grid-col-6">{{product.serialNumber}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12">
+                    <button type="button" pButton icon="pi pi-search" (click)="selectProduct(product)"></button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

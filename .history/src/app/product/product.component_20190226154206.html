@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>PRODUCT NAME</th>
+    <th>MODEL CODE</th>
+    <th>SERIAL NUMBER</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td>{{product.id}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.modelCode}}</td>
+    <td>{{product.serialNumber}}</td>
+  </tr>
+ 
+</table>
